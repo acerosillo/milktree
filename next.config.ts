@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
   // Only prefix routes for the deployed build so `npm run dev` serves at http://localhost:9002/
-  basePath: process.env.NODE_ENV === 'production' ? '/milktree' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/' : '',
   typescript: {
     ignoreBuildErrors: true,
   },
