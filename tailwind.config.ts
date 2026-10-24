@@ -9,10 +9,15 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+      padding: { DEFAULT: '1rem', lg: '2rem', xl: '3rem' },
+    },
     extend: {
       fontFamily: {
-        body: ['Alegreya', 'serif'],
+        body: ['Inter', 'sans-serif'],
         headline: ['Inter', 'sans-serif'],
+        display: ['"Cormorant Garamond"', 'serif'],
         code: ['monospace'],
       },
       colors: {

@@ -6,16 +6,19 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { SITE } from '@/lib/site';
 
 export default function ContactPage() {
   return (
     <>
       <Navbar />
       <main className="flex-1 py-24">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-headline font-light uppercase tracking-[0.2em] mb-4">Get in Touch</h1>
-            <p className="font-body italic text-muted-foreground">We'd love to hear from you.</p>
+        <div className="container max-w-5xl">
+          <div id="book" className="scroll-mt-40 text-center mb-16">
+            <p className="text-[11px] font-headline uppercase tracking-[0.3em] text-accent mb-3">Contact</p>
+            <h1 className="font-display text-4xl md:text-5xl mb-4">Get in Touch</h1>
+            <div className="w-14 h-px bg-accent mx-auto mb-5" />
+            <p className="text-muted-foreground">Questions, bespoke orders or a private styling appointment. We'd love to hear from you.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
@@ -33,7 +36,7 @@ export default function ContactPage() {
                   </div>
                   <div className="flex items-center gap-4">
                     <Mail className="h-5 w-5 text-accent shrink-0" />
-                    <p>hello@themilktreelondon.com</p>
+                    <p>{SITE.email}</p>
                   </div>
                   <div className="flex items-center gap-4">
                     <Phone className="h-5 w-5 text-accent shrink-0" />
@@ -69,13 +72,13 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="subject" className="text-[10px] uppercase tracking-widest">Subject</Label>
-                  <Input id="subject" className="rounded-none bg-transparent" />
+                  <Input id="subject" placeholder="e.g. Book a styling appointment" className="rounded-none bg-transparent" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="message" className="text-[10px] uppercase tracking-widest">Message</Label>
                   <Textarea id="message" className="min-h-[150px] rounded-none bg-transparent" />
                 </div>
-                <Button className="w-full font-headline uppercase tracking-[0.2em] py-6">
+                <Button className="w-full rounded-none bg-accent hover:bg-accent/90 text-accent-foreground font-headline uppercase tracking-[0.2em] py-6">
                   Send Message
                 </Button>
               </form>

@@ -20,7 +20,7 @@ export default function AdminDescriptionGenerator() {
 
   const [form, setForm] = useState({
     productName: "",
-    category: "coffee",
+    category: "jewellery",
     attributes: "",
     tags: ""
   });
@@ -56,7 +56,7 @@ export default function AdminDescriptionGenerator() {
     <>
       <Navbar />
       <main className="flex-1 py-12 md:py-24 bg-muted/30">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container max-w-4xl">
           <div className="flex flex-col items-center text-center mb-12">
             <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mb-4">
               <Sparkles className="h-6 w-6 text-accent" />
@@ -87,9 +87,9 @@ export default function AdminDescriptionGenerator() {
                     value={form.category}
                     onChange={e => setForm({ ...form, category: e.target.value })}
                   >
-                    <option value="coffee">Coffee</option>
-                    <option value="brunch">Brunch</option>
-                    <option value="dessert">Dessert</option>
+                    <option value="jewellery">Jewellery</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="home">Home Decor</option>
                   </select>
                 </div>
                 <div className="space-y-2">
@@ -147,7 +147,7 @@ export default function AdminDescriptionGenerator() {
                   )}
                 </div>
                 <div className="mt-4 pt-4 border-t flex justify-between items-center">
-                  <span className="text-[10px] font-headline uppercase tracking-widest text-muted-foreground">Powered by Milk Tree AI</span>
+                  <span className="text-[10px] font-headline uppercase tracking-widest text-muted-foreground">Powered by Madame Esmeralda AI</span>
                   {result && (
                     <span className="text-[10px] font-body italic text-muted-foreground">{result.split(' ').length} words</span>
                   )}
