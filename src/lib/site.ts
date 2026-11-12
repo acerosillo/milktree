@@ -1,12 +1,12 @@
 // Shared contact details and opening hours used across the site.
-// TODO: replace the WhatsApp number and video sources with the real ones.
 export const SITE = {
   name: 'Madame Esmeralda',
-  tagline: 'Jewellery, accessories & home decor, curated with natural elegance.',
-  email: 'hello@themilktreelondon.com',
+  tagline: 'Dominatrix, companion and authentic BDSM power dynamics.',
+  email: 'hello@madamesmeralda.com',
   phone: '+44 (0) 20 7946 0123',
   whatsappUrl: 'https://wa.me/442079460123',
-  instagramUrl: 'https://www.instagram.com/themilktree.london/?hl=en',
+  instagramUrl: 'https://www.instagram.com/madam_esmeralda2',
+  instagramHandle: 'madam_esmeralda2',
   address: ['34 Barking Rd, London E16 1EQ', 'Canning Town, London'],
   heroVideo: 'https://video.wixstatic.com/video/53937d_200fea536e0a463b9e795bf592722371/1080p/mp4/file.mp4',
 };
@@ -31,8 +31,35 @@ export const DELIVERY_RATES = [
   { name: 'International', time: '5–10 working days', price: 'From £18' },
 ];
 
-export const FEATURED_VIDEOS = [
-  { title: 'The Gold Edit', src: SITE.heroVideo, poster: 'https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=900&q=80' },
-  { title: 'Pearls, Reimagined', src: SITE.heroVideo, poster: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=80' },
-  { title: 'Styling the Home', src: SITE.heroVideo, poster: 'https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?w=900&q=80' },
+export type VideoItem = {
+  id?: string;
+  title: string;
+  src?: string;
+  poster?: string;
+  instagramUrl?: string;
+  embedUrl?: string;
+};
+
+export const FEATURED_VIDEOS: VideoItem[] = [
+  {
+    id: 'reel-1',
+    title: 'Boudoir & Power Dynamics',
+    src: SITE.heroVideo,
+    poster: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=900&q=80',
+    instagramUrl: 'https://www.instagram.com/reel/DVI_g2CCEvs/',
+  },
+  {
+    id: 'reel-2',
+    title: 'Dominance & Psychological Play',
+    src: SITE.heroVideo,
+    poster: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=900&q=80',
+    instagramUrl: 'https://www.instagram.com/madam_esmeralda2',
+  },
+  {
+    id: 'reel-3',
+    title: 'Curated Encounters & London Sessions',
+    src: SITE.heroVideo,
+    poster: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=900&q=80',
+    instagramUrl: 'https://www.instagram.com/madam_esmeralda2',
+  },
 ];

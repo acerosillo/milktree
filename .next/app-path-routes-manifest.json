@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/api/instagram/route": "/api/instagram",
+  "/contact/page": "/contact",
+  "/page": "/",
+  "/gallery/page": "/gallery",
+  "/about/page": "/about",
+  "/rates/page": "/rates"
+}

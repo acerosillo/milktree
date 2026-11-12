@@ -17,7 +17,11 @@ export function SectionHeading({ title, href, linkLabel, className }: Props) {
         <span className="h-px w-10 bg-accent" />
       </h2>
       {href && (
-        <Link href={href} className="flex shrink-0 items-center gap-2 text-[10px] md:text-[11px] font-headline uppercase tracking-[0.16em] hover:text-accent transition-colors">
+        <Link
+          href={href}
+          {...(href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+          className="flex shrink-0 items-center gap-2 text-[10px] md:text-[11px] font-headline uppercase tracking-[0.16em] hover:text-accent transition-colors"
+        >
           {linkLabel}
           <ArrowRight className="h-3.5 w-3.5" />
         </Link>

@@ -16,7 +16,7 @@ const EXPLORE_LINKS = [
   { href: '/gallery?category=jewellery', label: 'Jewellery' },
   { href: '/gallery?category=accessories', label: 'Accessories' },
   { href: '/gallery?category=home', label: 'Home Decor' },
-  { href: '/about', label: 'Our Story' },
+  { href: '/about', label: 'About' },
   { href: '/contact#book', label: 'Book an Appointment' },
 ];
 
